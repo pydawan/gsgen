@@ -3,28 +3,27 @@ package app.sample.models;
 import gsgen.annotations.Property;
 import gsgen.enums.Format;
 
-/**
- * <p>
- * 		Sample class that use @Property annotation to create get and set methods.
- * </p>
- *  
- * @author Thiago Alexandre Martins Monteiro
- *
- */
 public class Person {
-	
-	@Property(format=Format.BOTH)
+
+	@Property(format = Format.BOTH)
 	private String name;
-	
-	@Property(format=Format.BOTH)
+
+	@Property(format = Format.BOTH)
 	private int age;
-	
+
+	public Person() {
+	}
+
+	public String toString() {
+		return String.format("Person { name: %s, age: %d }", name, age);
+	}
+
 	public String getName() {
 		return name;
 	}
 
 	public String name() {
-		return name;
+		return getName();
 	}
 
 	public int getAge() {
@@ -32,7 +31,7 @@ public class Person {
 	}
 
 	public int age() {
-		return age;
+		return getAge();
 	}
 
 	public void setName(String name) {
@@ -40,7 +39,7 @@ public class Person {
 	}
 
 	public void name(String name) {
-		this.name = name;
+		setName(name);
 	}
 
 	public void setAge(int age) {
@@ -48,7 +47,7 @@ public class Person {
 	}
 
 	public void age(int age) {
-		this.age = age;
+		setAge(age);
 	}
 
 }

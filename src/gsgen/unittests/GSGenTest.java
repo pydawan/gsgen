@@ -18,15 +18,10 @@ public class GSGenTest {
 	 */
 	@Test
 	public void testLongGetterAndSetter() {
-		
 		int expected = 10;
-		
 		Person person = new Person();
-		
 		person.setAge(10);
-		
 		int actual = person.getAge();
-		
 		Assert.assertEquals(expected, actual);
 	}
 	
@@ -35,16 +30,10 @@ public class GSGenTest {
 	 */
 	@Test
 	public void testShortGetterAndSetter() {
-		
 		int expected = 30;
-		
 		Person person = new Person();
-		
 		person.age(30);
-		
 		int actual = person.age();
-		
 		Assert.assertEquals(expected, actual);
 	}
-
 }
